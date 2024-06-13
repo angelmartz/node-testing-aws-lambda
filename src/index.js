@@ -8,6 +8,11 @@ app.get('/', (req, res) => {
   res.send('Hello, Express!')
 })
 
+app.get('/hello/:message', (req, res) => {
+  const message = req.params.message
+  res.send(`hello ${message}!`)
+})
+
 if (process.argv[2] === 'localServer') {
   app.listen(EXPRESS_PORT, () => {
     console.log('Server is running on http://localhost:' + EXPRESS_PORT)
