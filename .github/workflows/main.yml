@@ -25,7 +25,7 @@ jobs:
       run: npm run build
 
     - name: Zip files
-      run: zip -r dist.zip dist/
+      run: cd dist; zip -r ../dist.zip * ; cd ..
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
