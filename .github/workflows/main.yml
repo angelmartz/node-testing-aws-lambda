@@ -40,10 +40,10 @@ jobs:
         path: .
 
     - name: Deploy to AWS Lambda
-      uses: aws-actions/aws-lambda-deploy@v1
+      uses: embeddedinn/deploy_lambda@v1.0.0
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: 'us-east-1'
-        function-name: 'nodel-lambda-testing'
-        zip-file: 'dist.zip'
+        access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        access-key-secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        region: ${{ secrets.AWS_REGION }}
+        lambda-name: ${{ secrets.LAMBDA_NAME }}
+        zip-file: dist.zip
