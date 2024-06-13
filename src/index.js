@@ -1,3 +1,4 @@
+console.log('Hello, Esbuild!');
 exports.handler = async (event) => {
 	console.log('Hello, Esbuild!');
 
