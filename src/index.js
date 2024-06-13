@@ -1,8 +1,18 @@
-exports.handler = async (event) => {
-  console.log('Hello, Esbuild!')
+import express from 'express'
+import { EXPRESS_PORT } from './config/config.js'
+import serverless from 'serverless-http'
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify('Hello from Other commit!')
-  }
+const app = express()
+
+app.get('/', (req, res) => {
+  res.send('Hello, Express!')
+})
+
+if (process.argv[2] === 'localServer') {
+  app.listen(EXPRESS_PORT, () => {
+    console.log('Server is running on http://localhost:' + EXPRESS_PORT)
+  })
+} else {
+  console.log('AWS Lambda Handler')
+  module.exports.handler = serverless(app)
 }
