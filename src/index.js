@@ -1,9 +1,8 @@
-console.log('Hello, Esbuild!')
 exports.handler = async (event) => {
   console.log('Hello, Esbuild!')
 
   return {
     statusCode: 200,
-    body: JSON.stringify('Hello from commit!')
+    body: JSON.stringify('Hello from Other commit!')
   }
 }
