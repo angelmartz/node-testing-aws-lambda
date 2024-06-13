@@ -1,0 +1,16 @@
+{
+  "name": "node-testing-aws-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Angel Martinez",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.21.5"
+  }
+}
