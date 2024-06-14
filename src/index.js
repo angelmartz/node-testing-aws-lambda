@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 app.get('/hello/:message', (req, res) => {
   const message = req.params.message
-  res.send(`hello ${message}!`)
+  res.send(`<h1>hello ${message}!</h1>`)
 })
 
 if (process.argv[2] === 'localServer') {
